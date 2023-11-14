@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4115892b73f2bb7a032a8692562133a",
+    "content-hash": "a47fecd05e8611fd27623f93e91733bb",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -210,6 +210,96 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "chrisreedio/inteliment",
+            "version": "dev-dev",
+            "dist": {
+                "type": "path",
+                "url": "/home/chris/dev/packages/composer/inteliment",
+                "reference": "34e34a6695ad98daa5d86b02efe63e8b5a8c0c95"
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "illuminate/contracts": "^10.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.15.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.9",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ChrisReedIO\\Inteliment\\IntelimentServiceProvider"
+                    ],
+                    "aliases": {
+                        "Inteliment": "ChrisReedIO\\Inteliment\\Facades\\Inteliment"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ChrisReedIO\\Inteliment\\": "src/",
+                    "ChrisReedIO\\Inteliment\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "ChrisReedIO\\Inteliment\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@php ./vendor/bin/testbench package:discover --ansi"
+                ],
+                "analyse": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest --coverage"
+                ],
+                "format": [
+                    "vendor/bin/pint"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Reed",
+                    "email": "chris@reedtech.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Filament Integration for OpenAI's Assistants",
+            "homepage": "https://github.com/chrisreedio/inteliment",
+            "keywords": [
+                "chrisreedio",
+                "inteliment",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/chrisreedio/inteliment/issues",
+                "source": "https://github.com/chrisreedio/inteliment"
+            },
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "danharrin/date-format-converter",
@@ -9854,8 +9944,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "chrisreedio/inteliment": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
