@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a47fecd05e8611fd27623f93e91733bb",
+    "content-hash": "2258e984f82dd67d429e56ed04cc3fbc",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -213,11 +213,11 @@
         },
         {
             "name": "chrisreedio/inteliment",
-            "version": "dev-dev",
+            "version": "dev-openai-models",
             "dist": {
                 "type": "path",
                 "url": "/home/chris/dev/packages/composer/inteliment",
-                "reference": "34e34a6695ad98daa5d86b02efe63e8b5a8c0c95"
+                "reference": "7b5d4c3a7988dd97e2100f59c2ca52d62bb80b03"
             },
             "require": {
                 "filament/filament": "^3.0",
